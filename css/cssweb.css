@@ -1,0 +1,217 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #faf7f5;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header with floral image */
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 0 0 30px;
+}
+
+/* Floral image - no text on top */
+header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 280px;
+    background-image: url("../media/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Name and information below image */
+header .container {
+    padding-top: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #70576b;
+    margin: 0 0 10px;
+}
+
+header p {
+    color: #665d63;
+    margin: 5px 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #eee3e9;
+    padding: 12px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: #654e60;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main sections */
+section {
+    background-color: white;
+    padding: 30px;
+    margin: 28px 0;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+    color: #70576b;
+    border-bottom: 2px solid #e4d2dc;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #805f76;
+}
+
+/* Project and skills grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background-color: #fcf8fa;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c9a9bc;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+/* Project images if added later */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #f5edf1;
+    margin-bottom: 15px;
+}
+
+/* Lists */
+.details-list li {
+    margin-bottom: 12px;
+}
+
+/* Links */
+a {
+    color: #805f76;
+}
+
+a:focus-visible {
+    outline: 3px solid #805f76;
+    outline-offset: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: #70576b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive: 992px */
+@media (max-width: 992px) {
+    .container {
+        width: 92%;
+    }
+
+    header::before {
+        height: 240px;
+    }
+}
+
+/* Responsive: 768px */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    header::before {
+        height: 200px;
+    }
+
+    section {
+        padding: 22px;
+    }
+}
+
+/* Responsive: 576px */
+@media (max-width: 576px) {
+    header::before {
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header .container {
+        padding-top: 20px;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 18px;
+    }
+}
